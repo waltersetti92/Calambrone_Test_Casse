@@ -27,5 +27,16 @@ namespace Calambrone_Test_Casse_2
             ucSpeaker1.setPos(size.Width, size.Height);
         }
 
+        private void ucSpeaker1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+           // this.Visible = false;
+            ucSpeaker1.Show();
+            currUC = ucSpeaker1;
+        }
     }
 }

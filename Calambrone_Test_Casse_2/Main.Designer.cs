@@ -42,13 +42,16 @@
             this.Button1.Size = new System.Drawing.Size(1083, 223);
             this.Button1.TabIndex = 0;
             this.Button1.Text = "TEST CASSE ";
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // ucSpeaker1
             // 
-            this.ucSpeaker1.Location = new System.Drawing.Point(-1, -2);
+            this.ucSpeaker1.Location = new System.Drawing.Point(2, 0);
             this.ucSpeaker1.Name = "ucSpeaker1";
+            this.ucSpeaker1.parentForm = null;
             this.ucSpeaker1.Size = new System.Drawing.Size(1912, 900);
             this.ucSpeaker1.TabIndex = 1;
+            this.ucSpeaker1.Load += new System.EventHandler(this.ucSpeaker1_Load);
             // 
             // Main
             // 
