@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Button1 = new System.Windows.Forms.Label();
+            this.ucSpeaker1 = new Calambrone_Test_Casse_2.ucSpeaker();
             this.SuspendLayout();
             // 
             // Button1
@@ -42,11 +43,19 @@
             this.Button1.TabIndex = 0;
             this.Button1.Text = "TEST CASSE ";
             // 
+            // ucSpeaker1
+            // 
+            this.ucSpeaker1.Location = new System.Drawing.Point(-1, -2);
+            this.ucSpeaker1.Name = "ucSpeaker1";
+            this.ucSpeaker1.Size = new System.Drawing.Size(1912, 900);
+            this.ucSpeaker1.TabIndex = 1;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1391, 646);
+            this.Controls.Add(this.ucSpeaker1);
             this.Controls.Add(this.Button1);
             this.Name = "Main";
             this.Text = "Test_Casse";
@@ -60,5 +69,6 @@
         #endregion
 
         private Label Button1;
+        private ucSpeaker ucSpeaker1;
     }
 }

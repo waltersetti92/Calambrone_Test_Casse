@@ -20,6 +20,7 @@ C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\bin\
 C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\bin\Debug\net6.0-windows\Calambrone_Test_Casse_2.runtimeconfig.json
 C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\bin\Debug\net6.0-windows\Calambrone_Test_Casse_2.dll
 C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\bin\Debug\net6.0-windows\Calambrone_Test_Casse_2.pdb
+C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\Calambrone_Test_Casse_2.csproj.AssemblyReference.cache
 C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\Calambrone_Test_Casse_2.Main.resources
 C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\Calambrone_Test_Casse_2.csproj.GenerateResource.cache
@@ -27,10 +28,10 @@ C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\
 C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\Calambrone_Test_Casse_2.AssemblyInfoInputs.cache
 C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\Calambrone_Test_Casse_2.AssemblyInfo.cs
 C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\Calambrone_Test_Casse_2.csproj.CoreCompileInputs.cache
+C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\Calambrone_Test_Casse_2.csproj.CopyComplete
 C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\Calambrone_Test_Casse_2.dll
-C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\ref\Calambrone_Test_Casse_2.dll
+C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\refint\Calambrone_Test_Casse_2.dll
 C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\Calambrone_Test_Casse_2.pdb
 C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\Calambrone_Test_Casse_2.genruntimeconfig.cache
-C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
-C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\Calambrone_Test_Casse_2.csproj.CopyComplete
-C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\refint\Calambrone_Test_Casse_2.dll
+C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\ref\Calambrone_Test_Casse_2.dll
+C:\Users\wsetti\source\repos\Calambrone_Test_Casse2\Calambrone_Test_Casse_2\obj\Debug\net6.0-windows\Calambrone_Test_Casse_2.ucSpeaker.resources
