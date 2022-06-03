@@ -19,10 +19,21 @@ namespace Calambrone_Test_Casse_2
         {
             InitializeComponent();
         }
-
+        public void Initial_Button()
+        {
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            button4.Visible = false;
+            button5.Visible = false;
+            button6.Visible = false;
+            button7.Visible = false;
+            button8.Visible = false;
+            button11.Visible = false;
+        }
         private void ucSpeaker_Load(object sender, EventArgs e)
         {
-
+            Initial_Button();
         }
         public void setPos(int w, int h)
         {
@@ -32,6 +43,36 @@ namespace Calambrone_Test_Casse_2
             Width = w - 1 * offset;
             Height = h - 1 * offset;
 
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            button10.Visible = false;
+            button7.Visible = true;
+            button8.Visible = true;
+            button11.Visible = true;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            button9.Visible = false;
+            button7.Visible = false;
+            button8.Visible = false;
+            button1.Visible = true;
+            button2.Visible = true;
+            button3.Visible = true;
+            button4.Visible = true;
+            button5.Visible = true;
+            button6.Visible = true;
+            button11.Visible = true;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Initial_Button();
+            button10.Visible = true;
+            button9.Visible = true;
+            button11.Visible = false;
         }
     }
 }

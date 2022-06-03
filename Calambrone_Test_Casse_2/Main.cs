@@ -34,7 +34,6 @@ namespace Calambrone_Test_Casse_2
 
         private void Button1_Click(object sender, EventArgs e)
         {
-           // this.Visible = false;
             ucSpeaker1.Show();
             currUC = ucSpeaker1;
         }
