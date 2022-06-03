@@ -1,10 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "Vem5Dqioe45ToJrKEVN15hznb69L8QzwpCjdza/rd7FAORA5lhloAhSN2YCctcY2cmqYfuuHJE5pEhpNAwcjvA==",
+  "dgSpecHash": "qDX06/WIdiBTXcaCri3IrTqZII89HMoVGUPk2XEeXu6Vf0D0VNCxwHcFAyDCZycJ8jh53Cx6GSUOkqZk7DOm3Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\wsetti\\source\\repos\\Calambrone_Test_Casse2\\Calambrone_Test_Casse_2\\Calambrone_Test_Casse_2.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\wsetti\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\wsetti\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\wsetti\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\6.0.0\\runtime.linux-arm.runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\wsetti\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\6.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\wsetti\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\6.0.0\\runtime.linux-x64.runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\wsetti\\.nuget\\packages\\runtime.native.system.io.ports\\6.0.0\\runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\wsetti\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\6.0.0\\runtime.osx-arm64.runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\wsetti\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\6.0.0\\runtime.osx-x64.runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\wsetti\\.nuget\\packages\\system.io.ports\\6.0.0\\system.io.ports.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

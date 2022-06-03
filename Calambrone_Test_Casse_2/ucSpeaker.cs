@@ -13,6 +13,7 @@ namespace Calambrone_Test_Casse_2
     public partial class ucSpeaker : UserControl
     {
         public Main parentForm { get; set; }
+        private Speakers speakers = null;
         private string[] availableComs;
 
         public ucSpeaker()
@@ -73,6 +74,28 @@ namespace Calambrone_Test_Casse_2
             button10.Visible = true;
             button9.Visible = true;
             button11.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            speakers.startSpeaker(Speakers.available_speakers[0]);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            string text = cmbCom.SelectedItem.ToString();
+            System.IO.File.WriteAllText(speakers.comFile, text);
+            speakers = speakers.openPort(text);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            speakers.startSpeaker(Speakers.available_speakers[1]);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            speakers.startSpeaker(Speakers.available_speakers[2]);
         }
     }
 }
