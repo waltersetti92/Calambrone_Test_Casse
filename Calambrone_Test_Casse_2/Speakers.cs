@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Calambrone_Test_Casse_2
 {
-    internal class Speakers
+    public class Speakers : IDisposable
     {
         private SerialPort sp;
         private string com = "";
@@ -16,7 +16,7 @@ namespace Calambrone_Test_Casse_2
         public bool isOpened = false;
         public string sound_speaker = " ";
         public string sound_time = "00";
-        public static string[] available_speakers = new string[3] { "03", "01", "04" };
+        public static string[] available_speakers = new string[3] { "04", "04", "04" };
 
         public Speakers()
         {
@@ -73,11 +73,14 @@ namespace Calambrone_Test_Casse_2
         private static byte[] hexstr2ByteArray(string str)
         {
             string[] hexValuesSplit = str.Split(' ');
+            MessageBox.Show(str);
+           
             byte[] arr = new byte[hexValuesSplit.Length];
+           
             int cnt = 0;
             foreach (String hex in hexValuesSplit)
             {
-                //MessageBox.Show(hex);
+                MessageBox.Show(hex);
                 arr[cnt] = Convert.ToByte(hex, 16);
                 cnt++;
             }
@@ -85,64 +88,84 @@ namespace Calambrone_Test_Casse_2
         }
         public bool reinitSpeakers(bool test = true)
         {
-            // if (sp.IsOpen is false)
-            //return false;
-            return true;
+            if (sp.IsOpen is false)
+                return false;
+            //return true;
 
 
             string str;
             byte[] bytes;
             foreach (string speaker in available_speakers)
             {
-                str = "F5 02 " + speaker + " 21 " + sound_speaker + "03 F0";
+                str = "F5 02 " + speaker + " 21 " + sound_speaker + " 03 F0";
                 bytes = hexstr2ByteArray(str);
                 sp.Write(bytes, 0, bytes.Length);
                 Thread.Sleep(200);
 
-                str = "F5 02 " + speaker + " 21 " + sound_speaker + "03 F0";
+                str = "F5 02 " + speaker + " 21 " + sound_speaker + " 03 F0";
                 bytes = hexstr2ByteArray(str);
                 sp.Write(bytes, 0, bytes.Length);
                 Thread.Sleep(200);
 
-                str = "F5 02 " + speaker + " 21 " + sound_speaker + "03 F0";
-                bytes = hexstr2ByteArray(str);
-                sp.Write(bytes, 0, bytes.Length);
-                Thread.Sleep(200);
-                str = "F5 02 " + speaker + " 21 " + sound_speaker + "03 F0";
+                str = "F5 02 " + speaker + " 21 " + sound_speaker + " 03 F0";
                 bytes = hexstr2ByteArray(str);
                 sp.Write(bytes, 0, bytes.Length);
                 Thread.Sleep(200);
 
-                str = "F5 02 " + speaker + " 21 " + sound_speaker + "03 F0";
+                str = "F5 02 " + speaker + " 21 " + sound_speaker + " 03 F0";
                 bytes = hexstr2ByteArray(str);
                 sp.Write(bytes, 0, bytes.Length);
                 Thread.Sleep(200);
 
-                str = "F5 02 " + speaker + " 21 " + sound_speaker + "03 F0";
+                str = "F5 02 " + speaker + " 21 " + sound_speaker + " 03 F0";
                 bytes = hexstr2ByteArray(str);
                 sp.Write(bytes, 0, bytes.Length);
                 Thread.Sleep(200);
 
+                str = "F5 02 " + speaker + " 21 " + sound_speaker + " 03 F0";
+                bytes = hexstr2ByteArray(str);
+                sp.Write(bytes, 0, bytes.Length);
+                Thread.Sleep(200);
 
             }
-
+            if (test)
+            {
+                foreach (string speaker in available_speakers)
+                {
+                    //startSpeaker(speaker);
+                    //Thread.Sleep(2000);
+                }
+            }
             return true;
         }
 
-        public bool startSpeaker(string speaker)
+        public bool startSpeaker(string speaker, string sound_speaker)
         {
             if (sp == null)
                 return false;
             if (sp.IsOpen is false)
                 return false;
-
-            string str;
+            string str, arr1, indata;
+            int length_response;
             byte[] bytes;
-            str = "F5 02 " + speaker + " 20 01 02 03 F0";
-
+            int dataLength = 0;
+            str = "F5 02 " + speaker + " 21 " + sound_speaker + "05 04 F0";
             bytes = hexstr2ByteArray(str);
-            sp.Write(bytes, 0, bytes.Length);
-
+            arr1 = "";
+            indata = "";
+            while (dataLength == 0)
+            {
+                sp.Write(bytes, 0, bytes.Length);
+                Thread.Sleep(1000);
+                indata = sp.ReadExisting();
+                length_response = indata.Length;
+                if (length_response > 20)
+                {
+                    arr1 = char.ToString(indata[18]);
+                }
+                if (String.Equals(arr1, "1") || String.Equals(arr1, "2") || String.Equals(arr1, "4"))
+                    break;
+            }
             return true;
         }
         ~Speakers()

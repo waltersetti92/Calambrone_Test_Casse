@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Calambrone_Test_Casse_2
 {
@@ -19,6 +14,16 @@ namespace Calambrone_Test_Casse_2
         public ucSpeaker()
         {
             InitializeComponent();
+        }
+        public void init(Speakers spk)
+        {
+            speakers = spk;
+            availableComs = Speakers.getAvailableComs();
+            foreach (string com in availableComs)
+                cmbCom.Items.Add(com);
+
+            if (cmbCom.Items.Count > 0)
+                cmbCom.SelectedIndex = 0;
         }
         public void Initial_Button()
         {
@@ -75,10 +80,9 @@ namespace Calambrone_Test_Casse_2
             button9.Visible = true;
             button11.Visible = false;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            speakers.startSpeaker(Speakers.available_speakers[0]);
+            speakers.startSpeaker(Speakers.available_speakers[0],"01 ");
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -90,12 +94,12 @@ namespace Calambrone_Test_Casse_2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            speakers.startSpeaker(Speakers.available_speakers[1]);
+            speakers.startSpeaker(Speakers.available_speakers[1],"01 ");
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            speakers.startSpeaker(Speakers.available_speakers[2]);
+            speakers.startSpeaker(Speakers.available_speakers[2],"01 ");
         }
     }
 }
