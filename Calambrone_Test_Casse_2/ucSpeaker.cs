@@ -101,5 +101,20 @@ namespace Calambrone_Test_Casse_2
         {
             speakers.startSpeaker(Speakers.available_speakers[2],"01 ");
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            speakers.stopspeaker();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            speakers.stopspeaker();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            speakers.stopspeaker();
+        }
     }
 }

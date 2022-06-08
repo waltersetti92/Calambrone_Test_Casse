@@ -17,6 +17,7 @@ namespace Calambrone_Test_Casse_2
         public string sound_speaker = " ";
         public string sound_time = "00";
         public static string[] available_speakers = new string[3] { "02", "01", "04" };
+        private CancellationTokenSource _canceller;
 
         public Speakers()
         {
@@ -136,13 +137,18 @@ namespace Calambrone_Test_Casse_2
             }
             return true;
         }
-
-        public bool startSpeaker(string speaker, string sound_speaker)
+        public async void stopspeaker()
         {
-            if (sp == null)
-                return false;
-            if (sp.IsOpen is false)
-                return false;
+            _canceller.Cancel();
+        }
+
+        public async void startSpeaker(string speaker, string sound_speaker)
+        {
+           // if (sp == null)
+               // return false;
+           // if (sp.IsOpen is false)
+              //  return false;
+
             string str, arr1, indata;
             int length_response;
             byte[] bytes;
@@ -151,20 +157,17 @@ namespace Calambrone_Test_Casse_2
             bytes = hexstr2ByteArray(str);
             arr1 = "";
             indata = "";
-            while (dataLength == 0)
+            _canceller = new CancellationTokenSource();
+            await Task.Run(() =>
             {
-                sp.Write(bytes, 0, bytes.Length);
-                Thread.Sleep(1000);
-                indata = sp.ReadExisting();
-                length_response = indata.Length;
-                if (length_response > 20)
+                do
                 {
-                    arr1 = char.ToString(indata[18]);
-                }
-                if (String.Equals(arr1, "1") || String.Equals(arr1, "2") || String.Equals(arr1, "4"))
-                    break;
-            }
-            return true;
+                    sp.Write(bytes, 0, bytes.Length);
+                    Thread.Sleep(300);
+                    if (_canceller.Token.IsCancellationRequested)
+                        break;
+                } while (true);
+            });
         }
         ~Speakers()
         {
