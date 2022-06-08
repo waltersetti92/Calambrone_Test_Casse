@@ -262,11 +262,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wsetti\\source\\repos\\Calambrone_Test_Casse2\\Calambrone_Test_Casse_2\\Calambrone_Test_Casse_2.csproj",
+      "projectUniqueName": "C:\\Users\\wsetti\\Source\\Repos\\Calambrone_Test_Casse_4\\Calambrone_Test_Casse_2\\Calambrone_Test_Casse_2.csproj",
       "projectName": "Calambrone_Test_Casse_2",
-      "projectPath": "C:\\Users\\wsetti\\source\\repos\\Calambrone_Test_Casse2\\Calambrone_Test_Casse_2\\Calambrone_Test_Casse_2.csproj",
+      "projectPath": "C:\\Users\\wsetti\\Source\\Repos\\Calambrone_Test_Casse_4\\Calambrone_Test_Casse_2\\Calambrone_Test_Casse_2.csproj",
       "packagesPath": "C:\\Users\\wsetti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wsetti\\source\\repos\\Calambrone_Test_Casse2\\Calambrone_Test_Casse_2\\obj\\",
+      "outputPath": "C:\\Users\\wsetti\\Source\\Repos\\Calambrone_Test_Casse_4\\Calambrone_Test_Casse_2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wsetti\\AppData\\Roaming\\NuGet\\NuGet.Config",
