@@ -16,7 +16,7 @@ namespace Calambrone_Test_Casse_2
         public bool isOpened = false;
         public string sound_speaker = " ";
         public string sound_time = "00";
-        public static string[] available_speakers = new string[3] { "04", "04", "04" };
+        public static string[] available_speakers = new string[3] { "02", "01", "04" };
 
         public Speakers()
         {
@@ -73,14 +73,12 @@ namespace Calambrone_Test_Casse_2
         private static byte[] hexstr2ByteArray(string str)
         {
             string[] hexValuesSplit = str.Split(' ');
-            MessageBox.Show(str);
            
             byte[] arr = new byte[hexValuesSplit.Length];
            
             int cnt = 0;
             foreach (String hex in hexValuesSplit)
             {
-                MessageBox.Show(hex);
                 arr[cnt] = Convert.ToByte(hex, 16);
                 cnt++;
             }
