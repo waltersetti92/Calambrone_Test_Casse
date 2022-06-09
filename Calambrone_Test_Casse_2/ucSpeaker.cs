@@ -33,6 +33,7 @@ namespace Calambrone_Test_Casse_2
             if (!_requestStop)
             {
                 _timer.Start();//restart the timer
+               // second_counter++;
             }
         }
 
@@ -162,9 +163,8 @@ namespace Calambrone_Test_Casse_2
             // timer.Stop();
             _requestStop = true;
             _timer.Stop();
-            textBox1.Text = Convert.ToString((second_counter)); 
-            second_counter = 0;
-                     
+            textBox1.Text = Convert.ToString(Decimal.Divide(second_counter,10)); 
+            second_counter = 0;                   
         }
 
         private void button6_Click(object sender, EventArgs e)
