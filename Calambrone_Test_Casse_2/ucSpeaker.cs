@@ -106,6 +106,7 @@ namespace Calambrone_Test_Casse_2
             timer2_1.Enabled = true;
             timer2_1.Start();
             speakers.startSpeaker(Speakers.available_speakers[1],"01 ",1);
+            //speakers.startSpeaker_all2("01");
         }
 
         private void button3_Click(object sender, EventArgs e)

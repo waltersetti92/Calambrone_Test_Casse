@@ -178,6 +178,41 @@ namespace Calambrone_Test_Casse_2
                 } while (true);
             });
         }
+        public async void startSpeaker_all2(string sound_speaker)
+        {
+            // if (sp == null)
+            // return false;
+            // if (sp.IsOpen is false)
+            //  return false;
+
+            string str1, str2, str3;
+            int length_response;
+            byte[] bytes1, bytes2, bytes3;
+            int dataLength = 0;
+            str1 = "F5 02 01 21 " + sound_speaker + "05 04 F0";
+            bytes1 = hexstr2ByteArray(str1);
+            str2 = "F5 02 02 21 " + sound_speaker + "05 04 F0";
+            bytes2 = hexstr2ByteArray(str2);
+            str3 = "F5 02 04 21 " + sound_speaker + "05 04 F0";
+            bytes3 = hexstr2ByteArray(str3);
+            timer_index = 0;
+            _canceller = new CancellationTokenSource();
+            await Task.Run(() =>
+            {
+                do
+                {
+                    sp.Write(bytes1, 0, bytes1.Length);
+                    Thread.Sleep(300);
+                    sp.Write(bytes2, 0, bytes2.Length);
+                    Thread.Sleep(300);
+                    sp.Write(bytes3, 0, bytes3.Length);
+                    Thread.Sleep(300);
+                    timer_index++;
+                    if (_canceller.Token.IsCancellationRequested)
+                        break;
+                } while (true);
+            });
+        }
         ~Speakers()
         {
             Dispose(false);
