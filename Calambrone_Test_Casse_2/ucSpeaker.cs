@@ -4,8 +4,6 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Timers;
 
-
-
 namespace Calambrone_Test_Casse_2
 {
     
@@ -13,6 +11,8 @@ namespace Calambrone_Test_Casse_2
     {
         public Main parentForm { get; set; }
         private static System.Timers.Timer timer;
+        private System.Timers.Timer _timer = new System.Timers.Timer();
+        private volatile bool _requestStop = false;
         public static int second_counter = 0;
         private Speakers speakers = null;
         private string[] availableComs;
@@ -21,8 +21,21 @@ namespace Calambrone_Test_Casse_2
         public ucSpeaker()
         {
             InitializeComponent();
-            timer = new System.Timers.Timer(100);  
+           // timer = new System.Timers.Timer(1000);
+            _timer.Interval = 100;
+            _timer.Elapsed += _timer_Elapsed; ;
+            _timer.AutoReset = false;
         }
+
+        private void _timer_Elapsed(object? sender, ElapsedEventArgs e)
+        {
+            second_counter++;
+            if (!_requestStop)
+            {
+                _timer.Start();//restart the timer
+            }
+        }
+
         public void init(Speakers spk)
         {
             speakers = spk;
@@ -105,20 +118,24 @@ namespace Calambrone_Test_Casse_2
 
         private void button2_Click(object sender, EventArgs e)
         {
+            second_counter = 0;
             button2.Visible = false;
             button5.Visible = true;
             textBox1.Text = "";
-            timer.AutoReset = true;
-            timer.Enabled = true; 
-            timer.Elapsed += Timer_Elapsed;
-            timer.Start();
+            //timer.Elapsed += Timer_Elapsed;
+            // timer.Enabled = true;
+            // timer.AutoReset = true;
+            _requestStop = false;
+            _timer.Start();
+           // timer.Start();
             speakers.startSpeaker(Speakers.available_speakers[1],"01 ",1);
             //speakers.startSpeaker_all2("01");
         }
 
         private void Timer_Elapsed(object? sender, ElapsedEventArgs e)
-        {
-            second_counter++;
+        {      
+         //  second_counter++;
+         // MessageBox.Show(second_counter.ToString());         
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -141,9 +158,13 @@ namespace Calambrone_Test_Casse_2
             button2.Visible = true;
             button5.Visible = false;
             speakers.stopspeaker();
-            timer.Enabled = false;
-            timer.Stop();
-            textBox1.Text = Convert.ToString(decimal.Divide(second_counter,10));
+            //  timer.Enabled = false;
+            // timer.Stop();
+            _requestStop = true;
+            _timer.Stop();
+            textBox1.Text = Convert.ToString((second_counter)); 
+            second_counter = 0;
+                     
         }
 
         private void button6_Click(object sender, EventArgs e)
