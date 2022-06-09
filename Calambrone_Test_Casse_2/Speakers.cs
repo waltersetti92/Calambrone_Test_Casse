@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Timers;
 
 namespace Calambrone_Test_Casse_2
 {
+   
     public class Speakers : IDisposable
     {
         private SerialPort sp;
@@ -18,6 +20,8 @@ namespace Calambrone_Test_Casse_2
         public string sound_time = "00";
         public static string[] available_speakers = new string[3] { "02", "01", "04" };
         private CancellationTokenSource _canceller;
+        public int timer_index = 0;
+
 
         public Speakers()
         {
@@ -157,6 +161,7 @@ namespace Calambrone_Test_Casse_2
             bytes = hexstr2ByteArray(str);
             arr1 = "";
             indata = "";
+            timer_index = 0;
             _canceller = new CancellationTokenSource();
             await Task.Run(() =>
             {
@@ -164,6 +169,7 @@ namespace Calambrone_Test_Casse_2
                 {
                     sp.Write(bytes, 0, bytes.Length);
                     Thread.Sleep(300);
+                    timer_index++;
                     if (_canceller.Token.IsCancellationRequested)
                         break;
                 } while (true);

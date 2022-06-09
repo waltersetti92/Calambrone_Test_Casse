@@ -22,7 +22,7 @@ namespace Calambrone_Test_Casse_2
 
         public Main()
         {
-            InitializeComponent();
+        InitializeComponent();
             speakers = new Speakers();
             ucSpeaker1.parentForm = this;
             ucSpeaker1.Visible = false;

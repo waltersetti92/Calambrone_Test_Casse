@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSpeaker));
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.timer2_1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -60,7 +62,7 @@
             // 
             this.button9.Location = new System.Drawing.Point(16, 22);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(142, 34);
+            this.button9.Size = new System.Drawing.Size(128, 34);
             this.button9.TabIndex = 15;
             this.button9.Text = "CONFUSION";
             this.button9.UseVisualStyleBackColor = true;
@@ -70,7 +72,7 @@
             // 
             this.button10.Location = new System.Drawing.Point(16, 62);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(265, 34);
+            this.button10.Size = new System.Drawing.Size(112, 34);
             this.button10.TabIndex = 16;
             this.button10.Text = "TRIANGLE COMPLETION";
             this.button10.UseVisualStyleBackColor = true;
@@ -256,6 +258,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(64, 31);
             this.textBox1.TabIndex = 35;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label5
             // 
@@ -264,7 +267,12 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(149, 25);
             this.label5.TabIndex = 36;
-            this.label5.Text = "Arrival Time 3->1";
+            this.label5.Text = "Arrival Time 2->1";
+            // 
+            // timer2_1
+            // 
+            this.timer2_1.Interval = 1000;
+            this.timer2_1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // ucSpeaker
             // 
@@ -327,5 +335,6 @@
         private Button button12;
         private TextBox textBox1;
         private Label label5;
+        private System.Windows.Forms.Timer timer2_1;
     }
 }
