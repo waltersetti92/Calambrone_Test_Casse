@@ -59,8 +59,9 @@ namespace Calambrone_Test_Casse_2
         {
             button10.Visible = false;
             button7.Visible = true;
-            button8.Visible = true;
+            button8.Visible = false;
             button11.Visible = true;
+
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -88,7 +89,7 @@ namespace Calambrone_Test_Casse_2
         {
             button1.Visible = false;
             button4.Visible = true;
-            speakers.startSpeaker(Speakers.available_speakers[0],"01 ");
+            speakers.startSpeaker(Speakers.available_speakers[0],"01 ",1);
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -104,14 +105,14 @@ namespace Calambrone_Test_Casse_2
             button5.Visible = true;
             timer2_1.Enabled = true;
             timer2_1.Start();
-            speakers.startSpeaker(Speakers.available_speakers[1],"01 ");
+            speakers.startSpeaker(Speakers.available_speakers[1],"01 ",1);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             button3.Visible = false;
             button6.Visible = true;
-            speakers.startSpeaker(Speakers.available_speakers[2],"01 ");
+            speakers.startSpeaker(Speakers.available_speakers[2],"01 ",1);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -147,6 +148,21 @@ namespace Calambrone_Test_Casse_2
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            button7.Visible = false;
+            button8.Visible = true;
+            speakers.startSpeaker(Speakers.available_speakers[2], "01 ", 2);
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            button7.Visible = true;
+            button8.Visible = false;
+            speakers.stopspeaker();
         }
     }
 }

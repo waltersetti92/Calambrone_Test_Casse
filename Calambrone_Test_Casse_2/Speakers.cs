@@ -146,7 +146,7 @@ namespace Calambrone_Test_Casse_2
             _canceller.Cancel();
         }
 
-        public async void startSpeaker(string speaker, string sound_speaker)
+        public async void startSpeaker(string speaker, string sound_speaker,int condition)
         {
            // if (sp == null)
                // return false;
@@ -157,7 +157,10 @@ namespace Calambrone_Test_Casse_2
             int length_response;
             byte[] bytes;
             int dataLength = 0;
+            if (condition==1)
             str = "F5 02 " + speaker + " 21 " + sound_speaker + "05 04 F0";
+            else
+            str = "F5 02 FF 21 " + sound_speaker + "05 04 F0";
             bytes = hexstr2ByteArray(str);
             arr1 = "";
             indata = "";
@@ -179,6 +182,8 @@ namespace Calambrone_Test_Casse_2
         {
             Dispose(false);
         }
+
+
 
         protected virtual void Dispose(bool disposing)
         {
