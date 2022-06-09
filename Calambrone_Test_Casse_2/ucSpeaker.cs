@@ -4,13 +4,16 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Timers;
 
+
+
 namespace Calambrone_Test_Casse_2
 {
-
+    
     public partial class ucSpeaker : UserControl
     {
         public Main parentForm { get; set; }
-      
+        private static System.Timers.Timer timer;
+        public static int second_counter = 0;
         private Speakers speakers = null;
         private string[] availableComs;
         public int reaching_time=0;
@@ -18,6 +21,7 @@ namespace Calambrone_Test_Casse_2
         public ucSpeaker()
         {
             InitializeComponent();
+            timer = new System.Timers.Timer(100);  
         }
         public void init(Speakers spk)
         {
@@ -103,10 +107,18 @@ namespace Calambrone_Test_Casse_2
         {
             button2.Visible = false;
             button5.Visible = true;
-            timer2_1.Enabled = true;
-            timer2_1.Start();
+            textBox1.Text = "";
+            timer.AutoReset = true;
+            timer.Enabled = true; 
+            timer.Elapsed += Timer_Elapsed;
+            timer.Start();
             speakers.startSpeaker(Speakers.available_speakers[1],"01 ",1);
             //speakers.startSpeaker_all2("01");
+        }
+
+        private void Timer_Elapsed(object? sender, ElapsedEventArgs e)
+        {
+            second_counter++;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -121,7 +133,7 @@ namespace Calambrone_Test_Casse_2
             button4.Visible=false;
             button1.Visible=true;
             speakers.stopspeaker();
-           
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -129,9 +141,9 @@ namespace Calambrone_Test_Casse_2
             button2.Visible = true;
             button5.Visible = false;
             speakers.stopspeaker();
-            reaching_time = speakers.timer_index;
-           // MessageBox.Show(reaching_time.ToString());
-            textBox1.Text = Convert.ToString(reaching_time);
+            timer.Enabled = false;
+            timer.Stop();
+            textBox1.Text = Convert.ToString(decimal.Divide(second_counter,10));
         }
 
         private void button6_Click(object sender, EventArgs e)
