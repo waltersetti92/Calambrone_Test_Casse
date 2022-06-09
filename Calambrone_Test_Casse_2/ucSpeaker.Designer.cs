@@ -53,6 +53,8 @@
             this.txtBox_Arrival = new System.Windows.Forms.TextBox();
             this.Arrival_Time = new System.Windows.Forms.Label();
             this.timer2_1 = new System.Windows.Forms.Timer(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1_arrival2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -276,10 +278,28 @@
             this.timer2_1.Interval = 1000;
             this.timer2_1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(623, 203);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(149, 25);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Arrival Time 1->4";
+            // 
+            // textBox1_arrival2
+            // 
+            this.textBox1_arrival2.Location = new System.Drawing.Point(667, 231);
+            this.textBox1_arrival2.Name = "textBox1_arrival2";
+            this.textBox1_arrival2.Size = new System.Drawing.Size(64, 31);
+            this.textBox1_arrival2.TabIndex = 38;
+            // 
             // ucSpeaker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox1_arrival2);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.Arrival_Time);
             this.Controls.Add(this.txtBox_Arrival);
             this.Controls.Add(this.btn_set);
@@ -338,5 +358,7 @@
         private TextBox txtBox_Arrival;
         private Label Arrival_Time;
         private System.Windows.Forms.Timer timer2_1;
+        private Label label5;
+        private TextBox textBox1_arrival2;
     }
 }
