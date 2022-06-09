@@ -58,6 +58,11 @@ namespace Calambrone_Test_Casse_2
             button7.Visible = false;
             button8.Visible = false;
             button11.Visible = false;
+            Arrival_Time.Visible = false;
+            txtBox_Arrival.Visible = false;
+            label4.Visible = false;
+            cmbCom.Visible = false;
+            btn_set.Visible = false;    
         }
         private void ucSpeaker_Load(object sender, EventArgs e)
         {
@@ -122,7 +127,9 @@ namespace Calambrone_Test_Casse_2
             second_counter = 0;
             button2.Visible = false;
             button5.Visible = true;
-            textBox1.Text = "";
+            button1.Visible = false;
+            button3.Visible = false;
+            txtBox_Arrival.Text = "";
             //timer.Elapsed += Timer_Elapsed;
             // timer.Enabled = true;
             // timer.AutoReset = true;
@@ -157,13 +164,17 @@ namespace Calambrone_Test_Casse_2
         private void button5_Click(object sender, EventArgs e)
         {
             button2.Visible = true;
+            button1.Visible=true;
+            button3.Visible=true;
             button5.Visible = false;
+            Arrival_Time.Visible = true;
+            txtBox_Arrival.Visible = true;
             speakers.stopspeaker();
             //  timer.Enabled = false;
             // timer.Stop();
             _requestStop = true;
             _timer.Stop();
-            textBox1.Text = Convert.ToString(Decimal.Divide(second_counter,10)); 
+            txtBox_Arrival.Text = Convert.ToString(Decimal.Divide(second_counter,10)); 
             second_counter = 0;                   
         }
 

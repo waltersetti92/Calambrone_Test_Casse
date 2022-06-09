@@ -49,9 +49,9 @@
             this.button11 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbCom = new System.Windows.Forms.ComboBox();
-            this.button12 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btn_set = new System.Windows.Forms.Button();
+            this.txtBox_Arrival = new System.Windows.Forms.TextBox();
+            this.Arrival_Time = new System.Windows.Forms.Label();
             this.timer2_1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -244,32 +244,32 @@
             this.cmbCom.Size = new System.Drawing.Size(182, 33);
             this.cmbCom.TabIndex = 33;
             // 
-            // button12
+            // btn_set
             // 
-            this.button12.Location = new System.Drawing.Point(214, 142);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(53, 33);
-            this.button12.TabIndex = 34;
-            this.button12.Text = "set";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.btn_set.Location = new System.Drawing.Point(214, 142);
+            this.btn_set.Name = "btn_set";
+            this.btn_set.Size = new System.Drawing.Size(53, 33);
+            this.btn_set.TabIndex = 34;
+            this.btn_set.Text = "set";
+            this.btn_set.UseVisualStyleBackColor = true;
+            this.btn_set.Click += new System.EventHandler(this.button12_Click);
             // 
-            // textBox1
+            // txtBox_Arrival
             // 
-            this.textBox1.Location = new System.Drawing.Point(370, 215);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(64, 31);
-            this.textBox1.TabIndex = 35;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtBox_Arrival.Location = new System.Drawing.Point(370, 215);
+            this.txtBox_Arrival.Name = "txtBox_Arrival";
+            this.txtBox_Arrival.Size = new System.Drawing.Size(64, 31);
+            this.txtBox_Arrival.TabIndex = 35;
+            this.txtBox_Arrival.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label5
+            // Arrival_Time
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(329, 187);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 25);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Arrival Time 2->1";
+            this.Arrival_Time.AutoSize = true;
+            this.Arrival_Time.Location = new System.Drawing.Point(329, 187);
+            this.Arrival_Time.Name = "Arrival_Time";
+            this.Arrival_Time.Size = new System.Drawing.Size(149, 25);
+            this.Arrival_Time.TabIndex = 36;
+            this.Arrival_Time.Text = "Arrival Time 2->1";
             // 
             // timer2_1
             // 
@@ -280,9 +280,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button12);
+            this.Controls.Add(this.Arrival_Time);
+            this.Controls.Add(this.txtBox_Arrival);
+            this.Controls.Add(this.btn_set);
             this.Controls.Add(this.cmbCom);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button11);
@@ -334,9 +334,9 @@
         private Button button11;
         private Label label4;
         private ComboBox cmbCom;
-        private Button button12;
-        private TextBox textBox1;
-        private Label label5;
+        private Button btn_set;
+        private TextBox txtBox_Arrival;
+        private Label Arrival_Time;
         private System.Windows.Forms.Timer timer2_1;
     }
 }
